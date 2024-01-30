@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const func = function PassByValue(a,b){
+        let temp;
+        temp = a;
+        a = b;
+        b = temp;
+        // console.log(`${a} and ${b}`);
+        return a;
+    }
+    let a= 1;
+    let b= 2;
+    console.log(`before function call pass by value of a ${a} and b ${b}`);
+    let finalResult = func(a,b);
+    console.log(`after passing the value ${finalResult}`);
+</script>
+</html>
