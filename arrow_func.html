@@ -1,0 +1,48 @@
+<!-- 'use strict';
+
+const rectangle = {
+  width: 20,
+  area() {
+    return function (length) {
+      return this.width * length;
+    };
+  },
+};
+
+try {
+  const areaOfRectangle = rectangle.area();
+  console.log(`Area: ${areaOfRectangle(50)}`);
+} catch (error) {
+  console.log(error.message);
+} -->
+
+<!-- //output: cannot read the width property undefined -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    'use strict';
+
+const rectangle = {
+    width: 20,
+    area() {
+      return (length) => this.width * length;
+    },
+  };
+
+try {
+  const areaOfRectangle = rectangle.area();
+  console.log(`Area: ${areaOfRectangle(50)}`);
+} catch (error) {
+  console.log(error.message);
+}
+
+</script>
+</html>

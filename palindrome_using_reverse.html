@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+</body>
+<script>
+    let sentance = "civic";
+    let sentanceArr = sentance.split("");
+     let check = function(){
+        return sentance.split('').toString() == sentanceArr.reverse().toString();
+     }
+     console.log(check(sentance) ? 'is a palindrome number' : 'is not a palindrome number');
+</script>
+</html>

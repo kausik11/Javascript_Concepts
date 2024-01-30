@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const student = {
+      name: "Lisha",
+      age: 24,
+      marks: 79.8,
+      dispaly: function () {
+        console.log("Name", this.name);
+      },
+    };
+    // create object from Student prototype
+    let student2 = Object.create(student);
+    student2.name = "kausik";
+    console.log(student2.name);
+
+    //************* another example of object.create()**************
+    const Animal = {
+      isHuman: false,
+      sound: "Unspecified",
+      makeSound() {
+        console.log(this.sound);
+      },
+    };
+    //create object from animal prototype
+    const snake = Object.create(Animal);
+    let sound = snake.makeSound();
+
+    // properties can be created  and overridden
+    snake.sound = "hiss";
+    console.log(snake.makeSound());
+
+    //we can also directly initialize object properties with second argument of create()
+    let properties = {
+      isHuman: {
+        value: true,
+      },
+      name: {
+        value: "Jack",
+        enumerable: true,
+        writable: true,
+      },
+      introduce: {
+        value: function () {
+          console.log(`Hey! I am ${this.name}.`);
+        },
+      },
+    };
+    const human = Object.create(Animal,properties);
+    human.name = "joe"
+    console.log(human.introduce());
+  </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //home made iterable function
+    // function iterable(){
+    //     let x = 10;
+    //     return {
+    //         next : function(){
+    //             x=x+10;
+    //             return{value : x, done:false}
+    //         }
+    //     }
+    // };
+
+    // const n = iterable();
+    // let a = n.next();
+    // console.log(a.value); 
+
+    //*********************** create an symbol.iterator to iterate through for of loop*************
+    //create an object
+    const obj = {};
+    //make it iterable
+    obj[Symbol.iterator] = function(){
+        let n =0;
+        done = false;
+        return {
+            next(){
+               n +=10;
+               if(n == 100){done=true};
+               return {value : n,done: done}            
+            }
+        }
+    }
+    for (const num of obj) {
+        console.log(num)
+    }
+</script>
+</html>

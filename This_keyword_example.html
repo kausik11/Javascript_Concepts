@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const FirstPerson = {
+        name: 'hello',
+        lname: 'world',
+        age:'22',
+        city:'London',
+      
+}
+    const SecondPerson = {
+        name: 'byy',
+        lname: 'universe',
+        age:'20',
+        city:'America'
+    }
+
+    const ShowDetails =
+        function(){
+            return `I am ${this.name} and i am lives in ${this.city}`
+        }
+    
+        //we can add this function to each object but it is not a good option instead we will bind or apply the
+        // external function to those Object
+    // FirstPerson.ShowDetails = ShowDetails;
+    // console.log(FirstPerson.ShowDetails())
+
+    console.log(ShowDetails.call(SecondPerson));
+    let bindResult = ShowDetails.bind(FirstPerson);
+    console.log(bindResult());
+</script>
+</html>

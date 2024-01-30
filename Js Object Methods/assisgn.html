@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const obj1 = {a:1, b:2};
+    const obj2 = {b:2};
+    const obj3 = {c:3};
+
+    const mergeObj  = Object.assign(obj1,obj2,obj3);
+    console.log(mergeObj);
+
+
+    // **********Cloning an object**********
+    const obj = {
+        name : "hello world",
+        age : 20
+    };
+    //create a target object
+    const newObj ={
+        gender : "male"
+    }
+  // copy all the properties of obj to newObj 
+  const copy = Object.assign(newObj,obj)
+  console.log(copy);
+   
+
+   //*************assign() to Merge Objects*******************
+   const a1 = {a:1,b:2,c:3};
+   const a2 ={b:12,c:13};
+   const a3 = {c:23}
+
+   const copyObj = Object.assign(a1,a2,a3);
+   console.log(copyObj);
+</script>
+</html>

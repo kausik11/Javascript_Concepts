@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let inputUsername = 'joe';
+let inputPassword = 'joe@901';
+
+const database = {
+  joe: {
+    user: 'joe ken',
+    password: 'joe@901',
+  },
+};
+let checkPassword = database[inputUsername].password === inputPassword;
+checkPassword && console.log(`${database[inputUsername].user || `User`} is logged in...`);
+console.log(database.password);
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        .image{
+            position: relative;
+        }
+        #show{
+            font-size: 2rem;
+            height: 100px;
+            position: absolute;
+           margin: 200px 0px 0px 800px;
+            top: 10px;
+        
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="image"><img src="https://media.gcflearnfree.org/content/571fa332dba9160e5c387c84_04_26_2016/keyboardandmouse_handsonkeyboard.png" alt="">
+        <div id="show"></div>
+    </div>
+    
+</body>
+<script>
+  
+    let timer = setInterval(func, 1000);
+    function func(){
+        let time = new Date().toLocaleTimeString();
+        document.getElementById("show").innerHTML = time;
+        console.log(a)
+    }
+
+   
+</script>
+</html>
+
+<!-- const secondsToDays = function (seconds) {
+    return Math.floor(Number(seconds) / (3600 * 24));
+  }; -->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const student = {
+    //     FirstName : "hello",
+    //     get getName(){
+    //         return this.FirstName;
+    //     },
+    //     set changeName(newName){
+    //          this.FirstName = newName;
+    //     }
+    // }
+
+    // console.log(student.getName);
+    // // student.changeName("universe");//wrong approach
+    // student.changeName="universe";
+    // console.log(student.FirstName);
+
+    // ****************************** object define property
+    const student = {
+        firstName : 'Jhon'
+    }
+        //getting Property
+        Object.defineProperty(student,"getName",{
+            get : function(){
+                return this.firstName;
+            }
+        });
+
+        Object.defineProperty(student,"setName",{
+            set : function(NewName){
+                 this.firstName = NewName;
+            }
+        })
+
+        console.log(student);
+
+        //changing the property value
+        student.setName = "kausik";
+
+        console.log(student)
+
+
+
+</script>
+</html>

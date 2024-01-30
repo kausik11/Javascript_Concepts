@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // constructor function
+// function Person () {
+//     this.name = 'John',
+//     this.age = 23
+// }
+
+// const person1 = new Person();
+
+// //adding method to the constructor function
+// Person.prototype.greet = function(){
+//     console.log("hello "+ this.name)
+// }
+
+// person1.greet();
+
+// ***********************another example*************
+ //object constructor function
+ function constructorFunc(fname,lname,nick) {
+        this.firstname = fname;
+        this.lastname = lname;
+        this.nickname = nick;    
+
+        this.describe = ()=>{
+            console.log(`${this.firstname} and ${this.lastname} and ${this.nickname}`);
+        }
+        
+    }
+
+    constructorFunc.prototype.secoundnickname = "rahul";
+    
+
+    const obj = {
+        name: "hello",
+        lname: "world"
+    }
+
+    const newobj = new constructorFunc("kausik","saha","sona");
+    newobj.describe();
+    // console.log(newobj);
+    console.log(newobj.secoundnickname);//accessing prototype
+
+
+    //2nd approach
+    const a = {
+        name2 : "hello",
+        language : "javascript"
+    }
+    let p = {
+        run : ()=>{
+            alert("this is a prototype");
+        }
+    }
+
+    //prototype of a prototype
+    p.__proto__ = {
+        name : "world"
+    }
+
+    a.__proto__ = p;
+    a.run();
+    console.log(a.name);
+    console.log(Object.getPrototypeOf(a));
+
+</script>
+</html>

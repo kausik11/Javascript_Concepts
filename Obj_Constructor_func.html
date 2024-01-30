@@ -1,0 +1,49 @@
+
+
+<!-- ********************************* -->
+
+<!-- JavaScript Constructor Function Parameters -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    
+ </body>
+ <script>
+    function Person(person_name,person_age,person_gender){
+     this.name = person_name,
+     this.age = person_age,
+     this.gendder = person_gender,
+
+     this.greet = ()=>{
+        return `hii  ${this.name}`;
+     }
+    }
+
+    let firstone = new Person("kartick",25,"Male");
+    console.log(firstone.greet());
+   // let obj = {
+   //    harry : 90,
+   //    shubh : 45,
+   //    shivika : 33,
+   //    ritika : 88
+   // }
+   // for(let x in obj){
+   //   console.log(x)
+   // }
+   // function ConstructorFun(name,num){
+   //     this.name = name;
+   //     this.number= num;
+   // }
+
+   // ConstructorFun.prototype.result = function(){
+   //   return  this.number;
+   // }
+   // let harry = new ConstructorFun("hello",60);
+   // console.log(harry.result());
+ </script>
+ </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show1"></div>
+    
+</body>
+<script>
+
+    //setinterval with parameter
+    // let a = setInterval(show, 1000,"hello","world");
+
+    // function show(a,b){
+        
+    //     console.log(a,b);
+    // }
+
+
+    //here 'a' Is the interval id to clear the interval later on
+    let num =0;
+    let maxNum = 5;
+
+    function show(){
+        console.log("hello Number" + num);  
+        // console.log(a,b)
+    //    document.getElementById("show1").innerHTML+= `${a+b}`+'<br>';
+       num = num+1;
+       if(num > maxNum){
+        clearInterval(a);   
+    }
+    }
+    
+    // let a = setInterval(function(){show("hello","world")},1000);
+    const a = setInterval(show, 1000,"hello","world");
+    console.log(a);
+     
+    
+
+    
+
+
+</script>
+</html>
