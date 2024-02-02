@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function alert(){
+        console.log(this.name);
+    }
+    obj = {
+        name:"hello",
+        alert:alert,
+        innerObj : {
+           name:"universe",
+           alert:alert
+        }
+    }
+    const a = obj.alert();
+    let name = "kausik";
+     obj.innerObj.alert();
+</script>
+</html>

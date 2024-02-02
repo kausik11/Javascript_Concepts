@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function alert(){
+    //     console.log(this.name);
+    // }
+
+    // const obj1={
+    //     name: "hello",
+    // }
+
+    // alert.call(obj1);
+
+    //**********call(), an object can use a method belonging to another object.*****
+    const person ={
+      fullName : function(){
+        console.log(this.firstName +" "+this.lastName); 
+        return this.firstName +" "+this.lastName;
+      }
+    }
+    const Person1 = {
+        firstName : "Hello",
+        lastName : "World"
+    }
+    const Person2 = {
+        firstName : "universe",
+        lastName : "World"
+    }
+
+    let a = person.fullName.call(Person2);
+    console.log(a);
+</script>
+</html>

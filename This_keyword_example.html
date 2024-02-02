@@ -36,5 +36,15 @@
     console.log(ShowDetails.call(SecondPerson));
     let bindResult = ShowDetails.bind(FirstPerson);
     console.log(bindResult());
+
+
+    //***************This context(Function default binding)********************/
+
+    function alert(n) { 
+  console.log(this.name = n + ' is calling'); 
+}
+
+const name = 'Kingsley'; 
+alert(name);
 </script>
 </html>

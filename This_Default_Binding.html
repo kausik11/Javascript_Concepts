@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function call(n) {
+      console.log((this.name = n));
+    }
+    const name = "hello";
+    call(name);
+
+    //********if we use strict then this is undefined*******
+    function alert(n) {
+    //   "use strict";
+      console.log(this.namee=n + " is calling");
+    }
+
+    const namee = "Kingsley";
+    alert(namee);
+  </script>
+</html>

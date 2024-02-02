@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let foo = function foo(name,address) {
+        this.myName = name;
+        this.location = address;
+        this.tellMyname = function(){
+            console.log(`My name is ${this.myName}`);
+        }
+    }
+    foo.prototype.address =  function(){console.log(this.location)}
+
+    let fooObj1 = new foo("Hello world","22/96");
+    let fooObj2 = new foo("Hello Universe","33/88");
+    fooObj1.tellMyname();
+    fooObj1 .address();
+    fooObj2.tellMyname();
+    fooObj2 .address();
+    
+  
+   
+</script>
+</html>
