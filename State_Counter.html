@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show" style=" display: flex; gap: 10px; justify-content: center;">
+        <button onclick="decrement()">-</button>
+        <p id="display"></p>
+        <button onclick="increment()()">+</button>
+    </div>
+</body>
+<script>
+    let a = document.querySelector("#display");
+
+    const state = {
+        count : 0 
+    }
+    
+    let b = function(count){
+     return `<p id="displaycontent">${count}</p>`
+    }
+    function callb(){
+        a.innerHTML=b(state.count)
+    }
+    function increment(){
+      let newcount = state.count+1;
+      state.count = newcount;
+      callb();
+    }
+    function decrement(){
+        if(state.count>0){
+            let newcount = state.count-1;
+            state.count = newcount;
+        }
+      callb();
+    }
+    callb();
+</script>
+</html>
