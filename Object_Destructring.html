@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const [name,roll] = ["hello world",23];
+    // console.log(name,roll);
+   
+    const user = { 
+    'name': 'Alex',
+    'address': '15th Park Avenue',
+    'age': 43
+}
+const {name,...rest} = user;
+console.log(rest);
+
+
+const obj = {
+  property1: "value1",
+  property2: {
+    nestedProperty1: "nestedValue1",
+    nestedProperty2: "nestedValue2"
+  },
+  property3: "value3"
+};
+const { property1, property2: { nestedProperty1, nestedProperty2 }, property3 } = obj;
+
+const clone_Spread = {...obj};
+console.log(clone_Spread);
+console.log(Object.getOwnPropertyDescriptor(obj,'property1'));
+
+console.log(property1);
+  
+</script>
+</html>
