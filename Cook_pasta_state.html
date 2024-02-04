@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let ovenTemp = 40;
+    function pot(){
+        this.boiledStatus = "Not Boiling";
+        this.startBoiling = function(){
+            if(ovenTemp>100){
+                this.boiledStatus = "Boiling";
+                return this.boiledStatus;
+               
+            }
+        }
+    }
+
+    function pasta(){
+        this.pastaStatus = "Not Cooked";
+        this.addToPot = function(boiledStatus){
+            if(boiledStatus == "Boiling"){
+                this.pastaStatus = "cooked";
+            }
+        }
+    }
+   
+    ovenTemp = 110;
+    let PastaPot = new pot();
+    PastaPot.startBoiling();
+    console.log(PastaPot);
+    let MyMeal = new pasta();
+    MyMeal.addToPot(PastaPot.boiledStatus);
+    console.log(MyMeal);
+
+
+    //********cooking Pasta in functional component**********
+     let StoveTemp = 100;
+     const cookPasta = (temp)=>{
+        if(temp >= 100){
+            return "Pasta Cokked";
+        }
+     }
+     let CookStatus = cookPasta(StoveTemp);
+     console.log(CookStatus);
+
+     //then serve the pasta on table that is depend on the state of the pasta that is ready or not
+
+     const Serve = (Status)=>{
+           if(Status == "Pasta Cokked"){
+             return "Dinner is ready to serve";
+           }
+     }
+
+     let servePasta = Serve(CookStatus);
+     console.log(servePasta);
+</script>
+</html>
