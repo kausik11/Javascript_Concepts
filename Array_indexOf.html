@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     //Finding If Element exists else Adding the Element
+     function check(arr,ele) {
+        if(arr.indexOf(ele)===-1){
+            arr.push(ele);
+            console.log("element not found, update array succesfully!!");
+        }else{
+            console.log("element found");
+        }
+     }
+
+     var parts = ["Monitor", "Keyboard", "Mouse", "Speaker"];
+     check(parts,"cpu");
+     console.log(parts);
+     check(parts,"monitor");
+     console.log(parts);
+</script>
+</html>

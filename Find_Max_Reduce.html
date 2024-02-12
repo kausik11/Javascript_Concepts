@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let ageGroup = [18, 21, 1, 1, 51, 18, 21, 5, 18, 7, 10];
+    ageGroup.reduce((acc,curr,index,arr)=>{
+         let total = acc+curr;
+         if(index === arr.length-1){
+            console.log(total/arr.length); 
+         }
+        return total;
+    });
+</script>
+</html>
